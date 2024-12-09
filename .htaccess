@@ -1,0 +1,24 @@
+<IfModule mod_env.c>
+    SetEnv CI_ENV production
+    php_value max_input_vars 5000
+    php_value suhosin.get.max_vars 5000
+    php_value suhosin.post.max_vars 5000
+    php_value suhosin.request.max_vars 5000
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Set the RewriteBase to the subdirectory
+    RewriteBase /bachpan_erp/
+
+    # Redirect to index.php if the requested file or directory doesn't exist
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Prevent access to .htaccess and .htpasswd files
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,43 @@
+.btn-black{
+	background-color: #425458;
+    border-color: #5d7479;
+    transition: .3s;
+    color: white;
+    font-weight: bold;
+}
+.btn-black:hover{
+	background-color: #293133;
+    border-color: #5d7479;
+    transition: .3s;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-green{
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    transition: .3s;
+    color: white;
+    font-weight: bold;
+}
+.btn-green:hover{
+    background-color: #519151;
+    border-color: #519151;
+    transition: .3s;
+    color: white;
+    font-weight: bold;
+}
+
+.req{
+	color: red;
+	font-weight: bold;
+}
+.validation_error p{
+	color: #a03a36;
+	font-weight: bold;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td 
+  {
+    color: black;
+  }
+  
